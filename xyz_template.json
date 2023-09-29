@@ -7,8 +7,8 @@
       "lora_name": "None",
       "lora_model_strength": 1,
       "lora_clip_strength": 1,
-      "positive": "cat portrait\n, best quality, high quality, good",
-      "negative": "nsfw, worst quality, deformed, low quality, bad",
+      "positive": "pirosmaniai, spiderman in new york chilling",
+      "negative": "",
       "empty_latent_width": 512,
       "empty_latent_height": 512,
       "batch_size": 1
@@ -62,7 +62,7 @@
       "XY_flip": "False",
       "Y_label_orientation": "Horizontal",
       "cache_models": "True",
-      "ksampler_output_image": "Images",
+      "ksampler_output_image": "Plot",
       "dependencies": [
         "1",
         6
@@ -84,15 +84,15 @@
       "lora_name": "None",
       "model_strength": 1,
       "clip_strength": 1,
-      "X_batch_count": 15,
-      "X_batch_path": "/home/irakli/ComfyUI/models/loras/LoRAs kiri",
-      "X_subdirectories": true,
+      "X_batch_count": 3,
+      "X_batch_path": "/home/irakli/ComfyUI/models/loras/xy_loras",
+      "X_subdirectories": false,
       "X_batch_sort": "ascending",
       "X_first_value": 0,
       "X_last_value": 1,
-      "Y_batch_count": 6,
-      "Y_first_value": 0.4,
-      "Y_last_value": 1.4
+      "Y_batch_count": 3,
+      "Y_first_value": 0.5,
+      "Y_last_value": 1.5
     },
     "class_type": "XY Input: LoRA Plot"
   }
