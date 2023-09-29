@@ -1,0 +1,99 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "1_bloody_mary_v1.safetensors",
+      "vae_name": "Baked VAE",
+      "clip_skip": -1,
+      "lora_name": "None",
+      "lora_model_strength": 1,
+      "lora_clip_strength": 1,
+      "positive": "cat portrait\n, best quality, high quality, good",
+      "negative": "nsfw, worst quality, deformed, low quality, bad",
+      "empty_latent_width": 512,
+      "empty_latent_height": 512,
+      "batch_size": 1
+    },
+    "class_type": "Efficient Loader"
+  },
+  "2": {
+    "inputs": {
+      "sampler_state": "Script",
+      "add_noise": "enable",
+      "noise_seed": 11,
+      "steps": 35,
+      "cfg": 5.5,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "preview_method": "none",
+      "vae_decode": "true",
+      "model": [
+        "1",
+        0
+      ],
+      "positive": [
+        "1",
+        1
+      ],
+      "negative": [
+        "1",
+        2
+      ],
+      "latent_image": [
+        "1",
+        3
+      ],
+      "optional_vae": [
+        "1",
+        4
+      ],
+      "script": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "KSampler Adv. (Efficient)"
+  },
+  "3": {
+    "inputs": {
+      "grid_spacing": 0,
+      "XY_flip": "False",
+      "Y_label_orientation": "Horizontal",
+      "cache_models": "True",
+      "ksampler_output_image": "Images",
+      "dependencies": [
+        "1",
+        6
+      ],
+      "X": [
+        "9",
+        0
+      ],
+      "Y": [
+        "9",
+        1
+      ]
+    },
+    "class_type": "XY Plot"
+  },
+  "9": {
+    "inputs": {
+      "input_mode": "X: LoRA Batch, Y: LoRA Weight",
+      "lora_name": "None",
+      "model_strength": 1,
+      "clip_strength": 1,
+      "X_batch_count": 15,
+      "X_batch_path": "/home/irakli/ComfyUI/models/loras/LoRAs kiri",
+      "X_subdirectories": true,
+      "X_batch_sort": "ascending",
+      "X_first_value": 0,
+      "X_last_value": 1,
+      "Y_batch_count": 6,
+      "Y_first_value": 0.4,
+      "Y_last_value": 1.4
+    },
+    "class_type": "XY Input: LoRA Plot"
+  }
+}
